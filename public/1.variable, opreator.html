@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Vanilla Js 🌴🌴🌴</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+  <script src="bundle.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+        background-color: black;
+    }
+
+    body, html {
+      font-family: 'Noto Serif SC', serif;
+      color: black;
+      background-color: #999;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #header {
+      padding: 1em;
+      background-color: #222;
+      color: white;
+      text-align: center;
+    }
+
+    #header h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    #header p {
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+<!-- Add your site or application content here -->
+  <header id="header">
+    <h1>Vanilla Js 🌴🌴🌴</h1><p>Insert opinions later...</p>
+  </header>
+  <div id="app">
+    <script>
+      /* 2. 변수 */
+      let num = 1;
+      let text = 'hello'; 
+      let text2 = "hello"; // 따옴표 차이는 없음
+
+      // boolean
+      let good = true;
+      let loading = false;
+
+      // null, undefined
+      let friend = null; // 아무런 값이 없음.
+      let criminal = undefined; // 정의되지 않았다. 
+      // console.log(criminal2);
+
+      /* 3. 연산자 - 산술연산자, 대입연산자 */
+
+      // 산술연산자 = 사칙연산.
+      console.log('산술연산자');
+
+      let a = 1+2-(3*4)/4;
+      console.log(a);
+
+      let b = 1;
+      console.log(b++); //연산하기 전의 갑이 나옴
+      console.log(b); // 코드 실행 후에 연산이 됨 
+      console.log(++b); // 먼저 연산 후의 갑이 나옴
+
+      let c = 1;
+      console.log(c--);
+      console.log(c);
+      console.log(--c);
+
+      // 대입연산자
+      console.log('대입연산자');
+      
+      let d = 1;
+      d += 3;
+      console.log(d);
+      d -= 3;
+      console.log(d);
+      d *= 3;
+      console.log(d);
+      d /= 3;
+      console.log(d);
+
+      // 논리연산자
+      console.log('논리연산자');
+
+      const e = true;
+      // NOT !
+      console.log(e);
+      console.log(!e);
+      
+      // AND &&
+      const f = true && true;
+      const g = true && false;
+      const h = false && false;
+      console.log(f, g, h); 
+
+      // OR ||
+      const i = true || true;
+      const j = true || false;
+      const k = false || false;
+      console.log(i, j, k); 
+
+      // 연산 순서 : !, &&, ||
+      const booOrder = !(true && false || true && false || !false);
+      // !(true && false || true && false || true);
+      // !(false || false || true);
+      // !(true);
+      // false;
+      console.log(booOrder);
+
+      // 비교연산자
+      console.log('비교연산자');
+
+      const a1 = 1;
+      const a2 = '1';
+      const equals = a1 == a2; // 타입 비교를 하지 않음
+      const equals2 = a1 === a2; // 타입 비교를 함. <- 권고.
+      console.log(equals, equals2);
+
+      const b1 = 1;
+      const b2 = '1';
+      const notEquals = b1 != b2; // 타입 비교를 하지 않음
+      const notEquals2 = b1 !== b2; // 타입 비교를 함. <- 권고.      
+      console.log(notEquals, notEquals2);
+
+      const compare1 = 1;
+      const compare2 = 2;
+      const compare3 = 2;
+      console.log(compare1 < compare2);
+      console.log(compare1 > compare2);
+      console.log(compare2 >= compare3);
+
+      // 문자열 붙이기
+      const str1 = '안녕';
+      const str2 = '하세요';
+      const str3 = str1 + str2;
+      console.log(str3);
+
+    </script>
+  </div>
+</body>
+</html>
