@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 단축 평가 논리 계산법 */
+    // 앞에 truthy, 뒤에 truthy일 경우 뒤의 값이 결과값
+    console.log(true && 'hello');
+    console.log('hello' && 'bye');
+    console.log(1 && 2);
+    // 앞에 falsy일 경우 그냥 그 값이 결과값
+    console.log(false && 'hello');
+    console.log(null && 'hello');
+    console.log(undefined && 'hello');
+    console.log('' && 'hello');
+    console.log(0 && 'hello');
+
+    const object = {name: 1};
+    const name = object && object.name;
+    console.log(name);
+    
+    const object2 = null;
+    const name2 = object2 && object2.name;
+    console.log(name2);
+  </script>
+</body>
+</html>

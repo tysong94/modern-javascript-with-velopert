@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 여러 조건 비교 후 boolean 값 리턴 시
+    function isAnimal1(text) {
+      return text === '고양이' || text === '개' || text === '거북이';
+    }
+
+    function isAnimal2(text) {
+      const animals = ['고양이', '개', '거북이'];
+      return animals.includes(text);
+    }
+
+    const isAnimal3 = (text) => ['고양이', '개', '거북이'].includes(text);
+
+    console.log(isAnimal1('고양이'), isAnimal1('새'));
+    console.log(isAnimal2('고양이'), isAnimal2('새'));
+    console.log(isAnimal3('고양이'), isAnimal3('새'));
+
+    // 여러 조건에 따라 다른 값을 리턴 시
+    function getSound1(animal) {
+     if(animal === '개') return '멍멍';
+     if(animal === '고양이') return '야옹';
+     return '??';
+    }
+
+    function getSound2(animal) {
+      const sounds = {
+        개: '멍멍',
+        고양이: '야옹',
+      }
+      return sounds[animal] || '...?';
+    }
+
+    console.log(getSound1('개'));
+    console.log(getSound1('인간'));
+
+    console.log(getSound2('개'));
+    console.log(getSound2('인간'));
+
+    // 여러 조건에 따라 다른 함수를 호출 시
+    function makeSound(animal) {
+      const tasks = {
+        개: () => {console.log('멍멍');},
+        고양이() {
+          console.log('야옹');
+        },
+        비둘기: function() {
+          console.log('구구');
+        }
+      }
+      if(!tasks[animal]) {
+        console.log('???');
+        return;
+      }
+      tasks[animal]();
+    }
+
+    makeSound('개');
+    makeSound('비둘기');
+    makeSound('인간');
+    
+  </script>
+</body>
+</html>

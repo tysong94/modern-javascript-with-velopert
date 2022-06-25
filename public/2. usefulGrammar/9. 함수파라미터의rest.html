@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 파라미터로서의 rest
+    // 인자의 개수를 모를 때 파라미터를 rest로 선언할 수 있다.
+    function sum(...params) {
+      return params.reduce((acc, current) => acc + current, 0);
+    }
+
+    console.log(sum(1, 2, 3, 4, 5));
+  </script>
+</body>
+</html>

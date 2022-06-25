@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Block Scope
+    // 블록 안에 동일한 변수가 선언될 경우, 해당 변수 호출. 우선순위 최우선.
+    // const, let은 영향가지 않음.
+    // 단, var로 동일한 변수를 선언하게 되면 기존 var에 영향. 덮어씀.
+    // var는 안쓰는 것이 좋다.
+    const value = 'hello!';
+    
+    function myFunction() {
+      const value = 'bye!';
+      if (true) {
+        const value = 'world';
+        console.log('block scope');
+        console.log(value);
+      }
+      console.log('function scope');
+      console.log(value);
+    }
+
+    myFunction() ;
+    console.log('global scope : ');
+    console.log(value);
+  </script>
+</body>
+</html>
