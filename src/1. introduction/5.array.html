@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 배열 생성 */
+    const array = [1, 'abc', {}, [1,2,3]];
+    console.log(array);
+
+    const objects = [
+      {name: '멍멍이',},
+      {name: '야옹이'}
+    ];
+    console.log(objects);
+    console.log(objects[0]);
+    console.log(objects[1]);
+
+    /* 배열 추가 */
+    objects.push({
+      name: '멍뭉이'
+    });
+    console.log(objects);
+
+    // array 크기
+    console.log(objects.length);
+
+  </script>
+</body>
+</html>

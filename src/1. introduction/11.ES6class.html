@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* ES6 Class */
+    // 기존의 객체 생성 과정을 간단하게 바꿈
+    class Animal {
+      constructor(type, name, sound) {
+        this.type = type;
+        this.name = name;
+        this.sound = sound;
+      }
+      say() { // 클래스 문법에서는 함수가 자동으로 prototype으로 되어짐.
+        console.log(this.sound);
+      }
+    }
+    const dog = new Animal('개', '멍멍이', '멍멍');
+    dog.say();
+    
+    class Dog extends Animal {
+      constructor(name, sound) {
+        super('개', name, sound);
+      }
+    }
+    const dog2 = new Dog('뭉뭉이', '뭉뭉');
+    dog2.say();
+
+    // 연습
+    class Food {
+      constructor(name) {
+        this.name = name;
+        this.brands = [];
+      }
+      addBrand(brand) {
+        this.brands.push(brand);
+      }
+      print() {
+        console.log(`${this.name}을/를 파는 음식점들:`);
+        console.log(this.brands.join(', '));
+      }
+    }
+
+    const pizza = new Food('피자');
+    pizza.addBrand('피자헛');
+    pizza.addBrand('도미노 피자');
+
+    const chicken = new Food('치킨');
+    chicken.addBrand('굽네치킨');
+    chicken.addBrand('BBQ');
+
+    pizza.print();
+    chicken.print();
+  </script>
+</body>
+</html>

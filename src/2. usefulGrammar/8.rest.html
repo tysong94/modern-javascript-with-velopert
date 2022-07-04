@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* rest는 일부를 제한 나머지를 모음 */
+    // 객체 rest
+    const purpleCuteSlime = {
+      name: '슬라임', 
+      attribute: 'cute',
+      color: 'purple'
+    }
+
+    const { color, ...cuteSlime } = purpleCuteSlime;
+    console.log(color);
+    console.log(cuteSlime);
+
+    const { attribute, ...slime } = cuteSlime;
+    console.log(attribute);
+    console.log(slime);
+
+    // 배열 rest
+    // 배열에서의 rest는 마지막에 와야함.
+    const numbers = [0, 1, 2, 3, 4, 5];
+    const [zero, one, ...rest] = numbers;
+    console.log(zero);
+    console.log(one);
+    console.log(rest);
+  </script>
+</body>
+</html>
